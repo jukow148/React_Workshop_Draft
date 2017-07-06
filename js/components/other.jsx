@@ -15,6 +15,19 @@ class Button extends React.Component {
     }
 }
 
+class Text extends React.Component {
+    render() {
+        if (this.props.currencyValue) {
+            return <div>
+                <p>Waluta: {this.props.currencyName}</p>
+                <p>Cena w USD: {this.props.currencyValue}</p>
+            </div>
+        } else {
+            return null;
+        }
+    }
+}
+
 class OtherCoins extends React.Component {
     constructor(props) {
         super(props);
@@ -45,6 +58,7 @@ class OtherCoins extends React.Component {
             <div>
                 <Input currentText={this.state.currentText} getText={this.getText} />
                 <Button getData={this.getData}/>
+                <Text currencyName={this.state.currencyName} currencyValue={this.state.currencyValue} />
             </div>
         )
     }

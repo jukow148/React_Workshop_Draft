@@ -1,19 +1,17 @@
 module.exports	=	{
-	entry:	"./js/app.jsx",
+	entry:	["whatwg-fetch","./js/app.jsx"],
 	output:	{
-		publicPath: "./",
-		filename: "js/out.js"
+		filename: "out.js"
 	},
 	devServer: {
 		inline: true,
 		contentBase: "./",
 		port: 3001
 	},
-	watch:	true,
 	module:	{
 		loaders: [
 			{
-				test: /\.jsx$/,		
+				test: /\.jsx$/,
 				exclude: /node_modules/,
 				loader:	'babel-loader',
 				query: {
@@ -30,7 +28,7 @@ module.exports	=	{
 				loaders: ['style-loader', 'css-loader']
 			},
 			{
-				test: /\.scss$/,		
+				test: /\.scss$/,
 				loaders: ['style-loader', 'css-loader', 'sass-loader']
 			}
 		]

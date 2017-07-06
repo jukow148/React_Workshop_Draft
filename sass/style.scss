@@ -49,11 +49,18 @@ header {
             &:hover {
                 background-color: $green-dark;
             }
+            a {
+                color: $white;
+                text-decoration: none;
+            }
         }
     }
 }
 
 //main - start
+.big {
+    min-height: 500px;
+}
 
 main {
     min-height: calc(100vh - 120px);
@@ -77,4 +84,3 @@ footer {
         line-height: 60px;
     }
 }
-
